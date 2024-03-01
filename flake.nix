@@ -17,7 +17,7 @@
 
   outputs = inputs:
     with inputs; let
-      secrets = builtins.fromJSON (builtins.readFile "${self}/secrets.json");
+      secrets = builtins.fromJSON (builtins.readFile "${self}/secrets/secrets.json");
 
       nixpkgsWithOverlays = with inputs; rec {
         config = {
