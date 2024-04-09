@@ -136,6 +136,20 @@ in {
       hostname.ssh_only = false;
       hostname.style = "bold green";
     };
+    
+    tmux = {
+      enable = true;
+      package = pkgs.unstable.tmux;
+      baseIndex = 1;
+      prefix = "C-Space";
+      
+      extraConfig = ''
+        bind -n M-h select-pane -L
+        bind -n M-j select-pane -D
+        bind -n M-k select-pane -U
+        bind -n M-l select-pane -R
+      '';
+    };
 
     # FIXME: disable whatever you don't want
     fzf.enable = true;
