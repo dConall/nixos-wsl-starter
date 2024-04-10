@@ -58,7 +58,7 @@
     # local dev stuf
     mkcert
     httpie
-
+   
     # treesitter
     tree-sitter
 

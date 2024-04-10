@@ -42,6 +42,19 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
 
+-- CoPilot
+table.insert(lvim.plugins, {
+  "zbirenbaum/copilot-cmp",
+  event = "InsertEnter",
+  dependencies = { "zbirenbaum/copilot.lua" },
+  config = function()
+    vim.defer_fn(function()
+      require("copilot").setup()     -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+      require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+    end, 100)
+  end,
+})
+
 -- lvim.builtin.treesitter.ignore_install = { "haskell" }
 
 -- -- always installed on startup, useful for parsers without a strict filetype
