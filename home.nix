@@ -19,6 +19,7 @@
     fx
     git
     git-crypt
+    pkgs.github-copilot-cli
     htop
     jq
     killall
