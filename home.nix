@@ -149,6 +149,9 @@ in {
         bind -n M-j select-pane -D
         bind -n M-k select-pane -U
         bind -n M-l select-pane -R
+
+        set -g default-terminal "screen-256color"
+        set-option -ga terminal-overrides ",xterm-256color:Tc"
       '';
     };
 
