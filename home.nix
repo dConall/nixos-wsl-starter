@@ -18,7 +18,6 @@
     findutils
     fx
     git
-    git-crypt
     pkgs.github-copilot-cli
     htop
     jq
@@ -43,6 +42,7 @@
     # key tools
     gh # for bootstrapping
     just
+    pkgs._1password
 
     # core languages
     rustup
@@ -342,6 +342,9 @@ in {
 
         # fixes duplication of commands when using tab-completion
         export LANG=C.UTF-8
+
+        #1pass zsh autocompletion
+        eval "$(op completion zsh)"; compdef _op op
       '';
     };
   };
