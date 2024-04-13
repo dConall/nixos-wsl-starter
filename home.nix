@@ -50,7 +50,7 @@
     lua
     nodejs
     python3
-    typescript
+    # typescript
 
     # rust stuff
     cargo-cache
