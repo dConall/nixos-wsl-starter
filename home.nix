@@ -87,7 +87,6 @@
     sqlfluff
     tflint
   ];
-
 in {
   imports = [
     nix-index-database.hmModules.nix-index
