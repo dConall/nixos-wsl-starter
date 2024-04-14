@@ -56,6 +56,25 @@ table.insert(lvim.plugins, {
   end,
 })
 
+-- lvim.plugins = {
+--   "jackMort/ChatGPT.nvim",
+--   event = "VeryLazy",
+--   config = function()
+--     require("chatgpt").setup({
+--       popup_input = {
+--         submit = "<CR>"
+--       };
+--       api_key_cmd = "op read op://Development/OpenAI/API_KEY/password --no-newline"
+--     })
+--   end,
+--   dependencies = {
+--     "MunifTanjim/nui.nvim",
+--     "nvim-lua/plenary.nvim",
+--     "folke/trouble.nvim",
+--     "nvim-telescope/telescope.nvim"
+--   }
+-- }
+
 -- lvim.builtin.treesitter.ignore_install = { "haskell" }
 
 -- -- always installed on startup, useful for parsers without a strict filetype
